@@ -244,6 +244,25 @@ Others:
 - CUDA support
 
 
+### torch_generate_digits_with_CNN_GAN_from_mnist.ipynb
+Subject: Building a GAN (Generative Adversarial Network) with PyTorch to generate hand-written digits from noise, trained from MNIS dataset. Use <b>CNN Architecture</b> (cf. other notebook).
+
+Data: MNIST (handwritten digits) via torchvision
+
+Procedure:
+- Previewing images from dataset with pyplot's imshow()
+- Generator network with torch.nn.module, torch.nn.Sequential, torch.nn.BatchNorm2d, torch.nn.Upsample, torch.nn.Conv2d, torch.nn.LeakyReLU, and torch.nn.Tanh
+- Discriminator with torch.nn.module, torch.nn.Sequential, torch.nn.Conv2d, and torch.nn.LeakyReLU, torch.nn.Dropout2d, torch.nn.Linear, and torch.nn.Sigmoid
+- Visualizing generator and discriminator with torchviz' make_dot()
+- Training with nn.BCEWithLogitsLoss as loss and two torch.optim.Adam optimizers (one for both generator and discriminator)
+- Previewing generated digits with imshow() after each n training steps
+- Visualization Loss for generator and discriminator with pyplot
+- Display development of generated images during training as image show with matplotlib.animation.ArtistAnimation
+- Interesting results
+
+Others:
+- CUDA support
+
 
 
 
