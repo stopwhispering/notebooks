@@ -203,6 +203,48 @@ Others:
 - CUDA support
 
 
+### torch_simple_linear_nn_for_iris_classification.ipynb
+Subject: Simple, linear neural network with Torch for IRIS classification.
+
+Data: Canonical Iris dataset (via sklearn.datasets.load_iris())
+
+Procedure:
+- visualize data distribution
+- split into train/test with torch.utils.data.random_split
+- tensorize and create from torch.utils.data.DataLoader
+- scale with sklearn.preprocessing.StandardScaler
+- neural network with torch.nn.Module, consisting of input and two hidden torch.nn.Linear layers, with torch.nn.functional.relu inbetween and torch.nn.functional.softmax at the end
+- visualize model with torchviz' make_dot()
+- training with torch.nn.CrossEntropyLoss and torch.optim.Adam
+- visualize loss and accuracy
+- display a ROC curve
+- (expected) good results
+
+Others:
+- CUDA support
+
+
+### torch_generate_digits_with_linear_NN_GAN_from_mnist.ipynb
+Subject: Building a GAN (Generative Adversarial Network) with PyTorch to generate hand-written digits from noise, trained from MNIS dataset.
+
+Data: MNIST (handwritten digits) via torchvision
+
+Procedure:
+- Previewing images from dataset with pyplot's imshow()
+- Generator network with torch.nn.module, torch.nn.Sequential, torch.nn.Linear, torch.nn.Sigmoid, torch.nn.Linear, torch.nn.BatchNorm1d, torch.nn.LeakyReLU, and torch.nn.Dropout
+- Discriminator with torch.nn.module, torch.nn.Sequential, torch.nn.Linear, and torch.nn.LeakyReLU,
+- Visualizing generator and discriminator with torchviz' make_dot()
+- Training with nn.BCEWithLogitsLoss as loss and two torch.optim.Adam optimizers (one for both generator and discriminator)
+- Previewing generated digits with imshow() after each n training steps
+- Visualization Loss for generator and discriminator with pyplot
+- Display development of generated images during training as image show with matplotlib.animation.ArtistAnimation
+- Interesting results
+
+Others:
+- CUDA support
+
+
+
 
 
 
