@@ -100,8 +100,26 @@ Procedure:
 - Disappointing results (to be expected with that simple input data)
 
 
+### torch_vanilla_rnn_for_family_name_language_prediction.ipynb
+Subject: Predicting the Language Origin of family names with a custom vanilla RSTM Model (no LSTM).
 
+Data: Family Names in 18 Languages (from pytorch tutorial)
 
+Procedure:
+
+- Using string.ascii_letters list as a simple vocabulary
+- Tokenizing characters in the family names
+- Tensorizing train and target, with targets being the 18 languages
+- Creating a torch.utils.data.TensorDataset and torch.utils.data.DataLoader
+- Creating torch.nn.module model with torch.nn.Linear, torch.nn.LogSoftmax, and torch.tanh
+- Training with torch.nn.CrossEntropyLoss, torch.optim.Adam, and hidden state tensors for storing the state in between a sequence
+- Visualization of losses with pyplot
+- Evaluation by classifying arbitrary input family names
+- Quite encouraging results
+
+Others:
+- CUDA support
+- working on Colab with Google Drive for loading data
 
 
 

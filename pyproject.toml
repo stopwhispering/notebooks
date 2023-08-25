@@ -13,6 +13,7 @@ torch = "^2.0.1"
 torchvision = "^0.15.2"
 torchtext = "^0.15.2"
 torchviz = "^0.0.2"
+matplotlib = "^3.7.2"
 
 
 [build-system]
