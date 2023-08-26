@@ -264,7 +264,21 @@ Others:
 - CUDA support
 
 
+pretrained_word2vec_google_news_gensim_model.ipynb
+Subject: Download and work with pretrained Work2vec embeddings.
 
+Data: google-news model, trained with Google News dataset (about 100 billion words). The model contains 300-dimensional vectors for 3 million words and phrases. 
+
+Procedure:
+- Print list of pretrained models from Gensim
+- Download model trained with Google-News dataset (to be executed in console)
+- Save that model locally
+- Load that model from local file, preferably with limited vocab
+- Load the model's vocab in Pytorch as torchtext.vocab.Vocab
+- Load the model's word vectors into a torch.nn.Embedding layer for usage in torch model
+
+Others:
+- Support for Colab for saving/loading from Google Drive
 
 
 
