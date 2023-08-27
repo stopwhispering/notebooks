@@ -179,6 +179,7 @@ Procedure:
 - Training a gensim.models.word2vec.Word2Vec model
 - Evaluation with gensim's model.wv.doesnt_match(), model.wv.most_similar(), model.wv.n_similarity(), model.wv.most_similar_cosmul() including the canonical King - Man + Woman -> Queen test (passed)
 - Wordclouds for male and female-associated words
+- Reduce the dimensionality from 200 to 2 via Principal Component Analysis (PCA) and display the two remaining dimensions of the most common words in a scatterplot to show near distance.
 - Good results (not reproduced with custom Torch models, cf. other notebooks)
 
 Others:
