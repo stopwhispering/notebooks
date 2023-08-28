@@ -282,7 +282,44 @@ Others:
 - Support for Colab for saving/loading from Google Drive
 
 
+nlp_data_analysis_cleaning_preprocessing_lstm_sentiment_analysis_imdb.ipynb
+Subject: Data Aalysis and Data Cleaning/Preprocessing plus simple sentiment Analysis LSMT Model
 
+Dataset: IMDB Movie Reviews (via Kaggle) containing 50.000 user reviews for movies and  label for each, 'negative' or 'positive'.
+
+Data Analysis:
+- Visualize Balanced of Labels with pandas/plt value_counts() plot
+- Visualize distribution of number of words per label with sns.histplot()
+- Visualize quotas of stopwords with sns.histplot()
+- Visualize most frequent words with wordcloud.WordCloud() and sns.barplot()
+- Apply n-gram (bigram and trigram) analysis and visualize most frequent n_grams with plotly.offline.iplot
+
+Preprocessing:
+- train/test-split with sklearn.model_selection.train_test_split
+- remove HTML Tags with RegEx
+- remove URLs with RegEx
+- remove Emojis with RegEx (not executed)
+- replace contractions like "he's" -> "he is" with static contractions mapping
+- lemmatize with nltk.pos_tag (for getting part-of-speech per word), nltk.corpus.wordnet, and nltk.stem.WordNetLemmatizer for lemmatizing (not executed)
+- load pretrained embeddings (google-news-300 word2vec) and detect missing words
+- remove double quotes (required after some tokenizing steps)
+- remove stopwords with nltk.corpus.stopwords
+- remove punctuation with RegEx
+- remove numbers with RegEx
+- Americanize British words so as to fit embeddings with mapping downloaded from https://raw.githubusercontent.com/hyperreality/American-British-English-Translator/master/data/british_spellings.json
+- Tokenize with nltk.tokenize.word_tokenize()
+- Token2index
+- Tensorize
+
+Build Sentiment Analysis Model:
+- Adopt pretrained embeddings for relevant words, initially-zero embeddings for words not in pretrained embeddings
+- Create classifier with nn.module, nn.Embedding (prefilled, see above), nn.LSTM, nn.Linear, nn.Softmax
+- Train model on training data with nn.CrossEntropyLoss and torch.optim.Adam as optimizer
+- Evaluate by computing accuracy on training and test data
+
+Others:
+- compatible with Colab for saving/loading files from Google Drive
+- CUDA support
 
 
 
