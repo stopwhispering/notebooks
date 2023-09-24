@@ -186,7 +186,7 @@ Others:
 - working on Colab with Google Drive for loading data
 
 
-### torch_cnn_for_mnist_classification.ipynb
+### kaggle/mnist-digits-classification-simple-torch-cnn.ipynb
 Subject: Building a CNN Classificator with PyTorch to classify hand-written digits.
 
 Data: MNIST (handwritten digits) via torchvision
@@ -202,6 +202,7 @@ Procedure:
 
 Others:
 - CUDA support
+- working on Google Colab and on Kaggle
 
 
 ### torch_simple_linear_nn_for_iris_classification.ipynb
